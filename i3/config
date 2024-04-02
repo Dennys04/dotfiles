@@ -223,3 +223,6 @@ exec picom -b -f
 
 # Switch Layout Script
 bindsym $mod+mod1+m exec --no-startup-id ~/.config/i3/scripts/switchLayout.sh
+
+# Rofi Audio Selector
+bindsym $mod+mod1+p exec  ~/Downloads/dotfiles/scripts/audio-selector.sh
