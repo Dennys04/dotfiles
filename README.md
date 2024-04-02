@@ -12,6 +12,5 @@
 - Kitty
 - Cavas
 - btop
-- Nvim
+- Nvim with Lua
 - Dunst
-
