@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Nivel de bateria
+# Level of battery
 battery_level=$(cat /sys/class/power_supply/BAT0/capacity)
 
-# Iconos para la bateria y cargador
+# Icons
 battery_icon=""
 charger_icon=""
 
@@ -14,7 +14,7 @@ nord_orange="%{F#D08770}"
 nord_red="%{F#BF616A}"
 nord_green="%{F#A3BE8C}"
 
-# Funcion para mostrar en polybar
+# Function to show in polybar
 show_battery_status() {
     if [ -f "/sys/class/power_supply/AC0/online" ] && [ $(cat /sys/class/power_supply/AC0/online) -eq 1 ]; then
         echo "%{F#81A1C1} $charger_icon %{F-} Charging $battery_level%"
@@ -32,6 +32,6 @@ show_battery_status() {
     fi
 }
 
-# Mostrar el estado de la bateria en la polybar
+# Call the function to show the status of the battery in the polybar
 show_battery_status
 
